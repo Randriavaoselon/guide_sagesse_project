@@ -1,0 +1,45 @@
+.button-up {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #0e55a8;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.button-up.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.button-up:hover {
+    background-color: #014794;
+    transform: translateY(-5px);
+}
+
+/* ===== RESPONSIVE POUR MOBILE ===== */
+@media (max-width: 768px) {
+    .button-up {
+        width: 45px; 
+        height: 45px;
+        bottom: 20px; 
+        right: 20px;
+        background-color: rgba(14, 85, 168, 0.9); 
+    }
+}
+
+.button-up:hover {
+    background-color: #014794;
+    transform: translateY(-5px); 
+}

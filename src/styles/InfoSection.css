@@ -1,0 +1,141 @@
+.info-section {
+  padding: 80px 24px;
+  background-color: #9fdffa;
+}
+
+
+.info-image {
+  flex: 0 0 45%;
+  max-width: 45%;
+}
+
+.info-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 24px 0 24px 0;
+  object-fit: cover;
+}
+
+
+.info-container {
+  max-width: 1152px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.info-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.info-content h3 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.info-content p {
+  color: #4b5563;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.stat-card {
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  opacity: 0;
+}
+
+.stat-card.animate {
+  animation: rotateInCard 0.8s ease forwards;
+}
+
+@keyframes rotateInCard {
+  0% {
+    opacity: 0;
+    transform: perspective(600px) rotateY(-30deg) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(600px) rotateY(0deg) translateY(0);
+  }
+}
+
+.stat-card h4 {
+  font-size: 1.5rem;
+  margin: 0 0 4px 0;
+  color: #111827;
+}
+
+.stat-card span {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #4b5563;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .info-section {
+    padding: 60px 20px;
+  }
+
+  .info-container {
+    flex-direction: column; 
+    gap: 40px;
+    align-items: center;
+  }
+
+  .info-image {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .info-image img {
+    width: 100%;
+    height: auto;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 20px; 
+  }
+
+  .info-content {
+    text-align: center;
+    width: 100%;
+  }
+
+  .info-content h3 {
+    font-size: 1.75rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .stat-card {
+    height: 120px;
+    padding: 10px;
+  }
+}

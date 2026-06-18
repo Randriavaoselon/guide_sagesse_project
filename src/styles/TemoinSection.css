@@ -1,0 +1,152 @@
+.temoin-section {
+    padding: 20px 24px;
+    background-color: #ffff;
+}
+
+.temoin-container {
+    max-width: 1152px;
+    margin: 0 auto;
+}
+
+.temoin-row {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.temoin-col-left {
+    flex: 1;
+}
+
+.subtitle {
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #6b7280;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.temoin-col-left h3 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 32px;
+    color: #111827;
+}
+
+.dots-container {
+    display: flex;
+    gap: 12px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #d0e5fe;
+}
+
+.dot.active {
+    background-color: #0e55a8;
+}
+
+.temoin-col-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 50px;
+}
+
+.testimonial-card {
+    background: #e9edf2;
+    padding: 32px;
+    padding-top: 40px; 
+    border-radius: 20px;
+    border-left: 4px solid #0e55a8;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    position: relative; 
+    width: 90%;
+    margin-top: 40px; 
+}
+
+.profile-img-overlap {
+    position: absolute;
+    top: -35px; 
+    left: -35px;   
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 5px solid #ffffff; 
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 10; 
+}
+
+.testimonial-card:nth-child(1) {
+    z-index: 2;
+    box-shadow: 0 20px 30px -10px rgba(0, 91, 183, 0.2);
+    margin-left: 0;
+}
+
+.testimonial-card:nth-child(2) {
+    margin-top: -30px;
+    margin-left: 40px;
+    z-index: 1;
+    opacity: 0.95;
+    border: 2px solid #cfdff0;
+
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #0e55a8;
+}
+
+.profile-info h5 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.profile-role {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.testimonial-card p {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #374151;
+    margin-bottom: 16px;
+}
+
+.testimonial-card h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* Responsive */
+@media (min-width: 1024px) {
+    .testimonial-card:nth-child(2) {
+        margin-top: -60px;
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .temoin-row {
+        flex-direction: column;
+        text-align: left;
+    }
+}
